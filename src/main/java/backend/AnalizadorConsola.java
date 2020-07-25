@@ -5,14 +5,28 @@
  */
 package backend;
 
+import java.util.Scanner;
+
 /**
  *
  * @author lguilln
  */
-public class Analizador {
+public class AnalizadorConsola {
 
-    public String cadenaRepetida(String base1, String base2, String repetida) //variables de entrada y cadena repetida en ADN
-    {
+    
+    Scanner entrada = new Scanner(System.in);
+    String base1;
+    String base2;
+    
+    System.out.println("Analizador de Consola");
+  
+    System.out.print("Cadena 1: ");
+    base1 = entrada.nextLine(); //Secuencia1 
+    System.out.println("");
+    System.out.print("Cadena 2: ");
+    base2 = entrada.nextLine(); //Secuencia 2
+    String repetida = "";  //variable que almacena el resultado, es el conjunto ordenado de las bases de mayor tamaño en ambas secuencias
+    
         //Desarrollo de Cadena Repetida
         String cadena_r = null;
          if(base1.length() >= base2.length()){
@@ -41,9 +55,6 @@ public class Analizador {
         }
         
     }
-    //Devuelve la Cadena que encuentra el Proceso     
-    cadena_r = repetida;
-    return cadena_r;
-}
+System.out.println("Resultado: "+ repetida); //Muestra la cadena mayor
     
-}
+
